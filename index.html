@@ -1,191 +1,132 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html><html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>شحن نداء الحرب</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شحن أكواد نداء الحرب</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: #f5f7fa;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Cairo', sans-serif;
+      background: #f0f2f5;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       color: #333;
-      direction: rtl;
     }
-
-    header {
-      background-color: #0077b6;
-      color: white;
-      padding: 1.5rem;
+    h1 {
       text-align: center;
-      font-size: 1.8rem;
+      color: #2c3e50;
     }
-
-    .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 1rem;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-
     .card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .card img {
-      width: 80px;
-      height: 80px;
-      border-radius: 12px;
-    }
-
-    .info {
-      flex: 1;
-      padding: 0 1rem;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #0077b6;
-    }
-
-    .code {
-      background-color: #e0f7fa;
-      border: 1px dashed #0077b6;
-      padding: 0.6rem 1rem;
-      border-radius: 10px;
-      font-size: 1rem;
-      margin-top: 0.5rem;
-      direction: ltr;
-    }
-
-    .utorg-button {
-      background-color: #00c897;
-      color: white;
-      padding: 0.6rem 1rem;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .utorg-button:hover {
-      background-color: #009f7a;
-    }
-
-    footer {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 15px;
       text-align: center;
-      padding: 2rem;
-      color: #888;
+      position: relative;
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #2d89ef;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+    .code-box {
+      margin-top: 10px;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 10px;
+      font-family: monospace;
+      direction: ltr;
+      display: none;
     }
   </style>
 </head>
 <body>
+  <h1>🛒 شحن أكواد نداء الحرب</h1>
+  <p style="text-align:center">اختر قيمة الكود، وادفع باستخدام <strong>USDT (BEP-20)</strong> عبر بطاقة فيزا / ماستركارد</p>
+  <div class="grid"><!-- CODE CARDS -->
+<div class="card">
+  <img src="https://i.imgur.com/PL5nynV.png" alt="20 دولار">
+  <div class="price">20 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-0051-1023-1982')">ادفع الآن</a>
+  <div class="code-box">SCARLA-0051-1023-1982</div>
+</div>
 
-  <header>شراء أكواد نداء الحرب - شحن فوري</header>
+<div class="card">
+  <img src="https://i.imgur.com/MI6F6Jr.png" alt="50 دولار">
+  <div class="price">50 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-2539-1210-9472')">ادفع الآن</a>
+  <div class="code-box">SCARLA-2539-1210-9472</div>
+</div>
 
-  <div class="container">
+<div class="card">
+  <img src="https://i.imgur.com/JzpPdH0.png" alt="100 دولار">
+  <div class="price">100 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-8892-5530-1102')">ادفع الآن</a>
+  <div class="code-box">SCARLA-8892-5530-1102</div>
+</div>
 
-    <!-- الكود: 20 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">20 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(20)">ادفع</button>
-    </div>
+<div class="card">
+  <img src="https://i.imgur.com/Qb6cRIg.png" alt="150 دولار">
+  <div class="price">150 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-4321-8991-0144')">ادفع الآن</a>
+  <div class="code-box">SCARLA-4321-8991-0144</div>
+</div>
 
-    <!-- الكود: 50 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">50 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(50)">ادفع</button>
-    </div>
+<div class="card">
+  <img src="https://i.imgur.com/vX9LOhY.png" alt="200 دولار">
+  <div class="price">200 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-1111-2222-3333')">ادفع الآن</a>
+  <div class="code-box">SCARLA-1111-2222-3333</div>
+</div>
 
-    <!-- الكود: 100 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">100 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(100)">ادفع</button>
-    </div>
+<div class="card">
+  <img src="https://i.imgur.com/2bJ6yha.png" alt="300 دولار">
+  <div class="price">300 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-4444-5555-6666')">ادفع الآن</a>
+  <div class="code-box">SCARLA-4444-5555-6666</div>
+</div>
 
-    <!-- الكود: 150 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">150 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(150)">ادفع</button>
-    </div>
+<div class="card">
+  <img src="https://i.imgur.com/7WYtEJH.png" alt="400 دولار">
+  <div class="price">400 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-7777-8888-9999')">ادفع الآن</a>
+  <div class="code-box">SCARLA-7777-8888-9999</div>
+</div>
 
-    <!-- الكود: 200 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">200 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(200)">ادفع</button>
-    </div>
+<div class="card">
+  <img src="https://i.imgur.com/Apf8aOs.png" alt="500 دولار">
+  <div class="price">500 دولار</div>
+  <a href="#" class="buy-btn" onclick="revealCode(this, 'SCARLA-0000-1234-5678')">ادفع الآن</a>
+  <div class="code-box">SCARLA-0000-1234-5678</div>
+</div>
 
-    <!-- الكود: 300 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">300 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(300)">ادفع</button>
-    </div>
-
-    <!-- الكود: 400 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">400 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(400)">ادفع</button>
-    </div>
-
-    <!-- الكود: 500 دولار -->
-    <div class="card">
-      <img src="https://i.imgur.com/n1Ri6Lp.png" alt="code image">
-      <div class="info">
-        <div class="price">500 دولار</div>
-        <div class="code">SCARLA-9X27-LK4M-ZQ81</div>
-      </div>
-      <button class="utorg-button" onclick="payWithUtorg(500)">ادفع</button>
-    </div>
-
-  </div>
-
-  <footer>جميع الحقوق محفوظة © 2025</footer>
-
-  <script>
-    function payWithUtorg(amount) {
-      const address = "0xa089d651369d3064e989ddd7b4e51f013b0996a3"; // محفظتك
-      const currency = "usdt";
-      const network = "bsc"; // Binance Smart Chain
-
-      const url = `https://widget.utorg.pro/?currency=${currency}&amount=${amount}&address=${address}&network=${network}`;
-      window.open(url, "_blank");
+  </div>  <script>
+    function revealCode(el, code) {
+      const box = el.nextElementSibling;
+      el.style.display = 'none';
+      box.style.display = 'block';
+      box.textContent = code;
     }
-  </script>
-</body>
+  </script></body>
 </html>
